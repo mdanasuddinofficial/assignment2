@@ -1,9 +1,10 @@
-import { Link, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 const Navbar = () => {
   return (
     <div className="navbar bg-base-100 shadow-md px-4 md:px-8">
       <div className="navbar-start">
+        {/* Mobile Dropdown */}
         <div className="dropdown lg:hidden">
           <div tabIndex={0} role="button" className="btn btn-ghost">
             <svg
@@ -28,6 +29,17 @@ const Navbar = () => {
           >
             <li>
               <NavLink
+                to="/"
+                end
+                className={({ isActive }) =>
+                  isActive ? "bg-white text-black font-semibold" : ""
+                }
+              >
+                Home
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
                 to="/movies"
                 className={({ isActive }) =>
                   isActive ? "bg-white text-black font-semibold" : ""
@@ -38,12 +50,35 @@ const Navbar = () => {
             </li>
           </ul>
         </div>
-        <Link to="/" className="btn btn-ghost text-xl font-bold">
+
+        {/* Logo / Brand Name as Home link with active effect */}
+        <NavLink
+          to="/"
+          end
+          className={({ isActive }) =>
+            `btn btn-ghost text-xl font-bold ${
+              isActive ? "bg-white text-black" : ""
+            }`
+          }
+        >
           Movie Explorer
-        </Link>
+        </NavLink>
       </div>
+
+      {/* Desktop Menu */}
       <div className="navbar-end hidden lg:flex">
         <ul className="menu menu-horizontal px-1 text-base font-medium gap-2">
+          <li>
+            <NavLink
+              to="/"
+              end
+              className={({ isActive }) =>
+                isActive ? "bg-white text-black font-semibold" : ""
+              }
+            >
+              Home
+            </NavLink>
+          </li>
           <li>
             <NavLink
               to="/movies"
