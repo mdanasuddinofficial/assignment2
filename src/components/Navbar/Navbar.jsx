@@ -43,7 +43,7 @@ const Navbar = () => {
       </div>
 
       {/* Navbar Center / Desktop Menu */}
-      <div className="navbar-center hidden lg:flex">
+      <div className="navbar-end hidden lg:flex">
         <ul className="menu menu-horizontal px-1 text-base font-medium">
           <li>
             <Link to="/">Home</Link>
