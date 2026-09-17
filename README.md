@@ -42,6 +42,9 @@ https://api.tvmaze.com/search/shows?q={query}
 
 ## Project Structure
 
+## Project Structure
+
+```text
 src/
 ├── assets/
 │   └── hero.png
@@ -71,6 +74,7 @@ src/
 ├── App.jsx
 ├── index.css
 └── main.jsx
+```
 
 ## Installation
 
