@@ -28,16 +28,6 @@ const Navbar = () => {
           >
             <li>
               <NavLink
-                to="/"
-                className={({ isActive }) =>
-                  isActive ? "bg-white text-black font-semibold" : ""
-                }
-              >
-                Home
-              </NavLink>
-            </li>
-            <li>
-              <NavLink
                 to="/movies"
                 className={({ isActive }) =>
                   isActive ? "bg-white text-black font-semibold" : ""
@@ -54,16 +44,6 @@ const Navbar = () => {
       </div>
       <div className="navbar-end hidden lg:flex">
         <ul className="menu menu-horizontal px-1 text-base font-medium gap-2">
-          <li>
-            <NavLink
-              to="/"
-              className={({ isActive }) =>
-                isActive ? "bg-white text-black font-semibold" : ""
-              }
-            >
-              Home
-            </NavLink>
-          </li>
           <li>
             <NavLink
               to="/movies"
