@@ -54,32 +54,22 @@ const Movies = () => {
   return (
     <div className="flex flex-col min-h-screen bg-base-100">
       <Navbar />
-      
-      {/* Main Content Area */}
       <main className="grow max-w-7xl mx-auto px-4 py-10 w-full">
         <div className="text-center my-8">
           <h1 className="text-4xl font-bold mb-2">Explore Movies</h1>
           <p className="text-gray-500">Find your next favorite movie</p>
         </div>
-
-        {/* Search Bar Component */}
         <SearchBar search={search} setSearch={setSearch} />
-
-        {/* Error Message */}
         {error && (
           <div className="alert alert-error max-w-md mx-auto my-6 text-center">
             <span>{error}</span>
           </div>
         )}
-
-        {/* Loading Indicator */}
         {loading && (
           <div className="flex justify-center items-center my-16">
             <span className="loading loading-spinner loading-lg text-primary"></span>
           </div>
         )}
-
-        {/* No Movies Found Message */}
         {!loading && !error && movies.length === 0 && (
           <div className="alert alert-info max-w-md mx-auto my-12 text-center">
             <div>
@@ -88,19 +78,14 @@ const Movies = () => {
             </div>
           </div>
         )}
-
-        {/* Movie Grid Component with onDetails Callback */}
         {!loading && !error && movies.length > 0 && (
           <MovieGrid movies={movies} onDetails={setSelectedMovie} />
         )}
       </main>
-
-      {/* Movie Details Modal Component */}
       <MovieModal 
         movie={selectedMovie} 
         onClose={() => setSelectedMovie(null)} 
       />
-
       <Footer />
     </div>
   );

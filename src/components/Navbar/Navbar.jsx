@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 const Navbar = () => {
   return (
@@ -27,10 +27,24 @@ const Navbar = () => {
             className="menu menu-sm dropdown-content mt-3 z-50 p-2 shadow bg-base-100 rounded-box w-52"
           >
             <li>
-              <Link to="/">Home</Link>
+              <NavLink
+                to="/"
+                className={({ isActive }) =>
+                  isActive ? "bg-white text-black font-semibold" : ""
+                }
+              >
+                Home
+              </NavLink>
             </li>
             <li>
-              <Link to="/movies">Movies</Link>
+              <NavLink
+                to="/movies"
+                className={({ isActive }) =>
+                  isActive ? "bg-white text-black font-semibold" : ""
+                }
+              >
+                Movies
+              </NavLink>
             </li>
           </ul>
         </div>
@@ -39,12 +53,26 @@ const Navbar = () => {
         </Link>
       </div>
       <div className="navbar-end hidden lg:flex">
-        <ul className="menu menu-horizontal px-1 text-base font-medium">
+        <ul className="menu menu-horizontal px-1 text-base font-medium gap-2">
           <li>
-            <Link to="/">Home</Link>
+            <NavLink
+              to="/"
+              className={({ isActive }) =>
+                isActive ? "bg-white text-black font-semibold" : ""
+              }
+            >
+              Home
+            </NavLink>
           </li>
           <li>
-            <Link to="/movies">Movies</Link>
+            <NavLink
+              to="/movies"
+              className={({ isActive }) =>
+                isActive ? "bg-white text-black font-semibold" : ""
+              }
+            >
+              Movies
+            </NavLink>
           </li>
         </ul>
       </div>
