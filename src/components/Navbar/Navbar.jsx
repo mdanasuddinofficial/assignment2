@@ -70,17 +70,6 @@ const Navbar = () => {
         <ul className="menu menu-horizontal px-1 text-base font-medium gap-2">
           <li>
             <NavLink
-              to="/"
-              end
-              className={({ isActive }) =>
-                isActive ? "bg-white text-black font-semibold" : ""
-              }
-            >
-              Home
-            </NavLink>
-          </li>
-          <li>
-            <NavLink
               to="/movies"
               className={({ isActive }) =>
                 isActive ? "bg-white text-black font-semibold" : ""
