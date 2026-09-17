@@ -17,7 +17,7 @@ const Hero = () => {
             Movie Explorer
           </h1>
           <p className="mb-5 text-gray-200">
-            Discover your next favorite movie, explore trending collections, and dive into an amazing world of cinematic experiences.
+            Explore trending collections
           </p>
           <Link to="/movies" className="btn btn-primary">
             Explore Movies
