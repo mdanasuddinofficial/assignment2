@@ -29,17 +29,6 @@ const Navbar = () => {
           >
             <li>
               <NavLink
-                to="/"
-                end
-                className={({ isActive }) =>
-                  isActive ? "bg-white text-black font-semibold" : ""
-                }
-              >
-                Home
-              </NavLink>
-            </li>
-            <li>
-              <NavLink
                 to="/movies"
                 className={({ isActive }) =>
                   isActive ? "bg-white text-black font-semibold" : ""
@@ -50,8 +39,6 @@ const Navbar = () => {
             </li>
           </ul>
         </div>
-
-        {/* Logo / Brand Name as Home link with active effect */}
         <NavLink
           to="/"
           end
