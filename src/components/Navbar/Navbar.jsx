@@ -31,11 +31,13 @@ const Navbar = () => {
               <NavLink
                 to="/movies"
                 className={({ isActive }) =>
-                  isActive ? "bg-white text-black font-semibold" : ""
+                    `px-4 py-2 rounded-xl transition-all duration-300 hover:scale-105 ${
+                    isActive ? "bg-white text-black font-semibold shadow-md" : "hover:bg-gray-800 hover:text-white"
+                    }`
                 }
-              >
+                >
                 Movies
-              </NavLink>
+            </NavLink>
             </li>
           </ul>
         </div>

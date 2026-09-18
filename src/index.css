@@ -1,2 +1,11 @@
 @import "tailwindcss";
 @plugin "daisyui";
+@layer components {
+  .btn {
+    @apply rounded-full px-6 font-medium transition-all duration-300 ease-in-out border border-white/10 bg-white/10 text-white shadow-sm backdrop-blur-md;
+  }
+
+  .btn:hover {
+    @apply bg-white/20 border-white/20 scale-105 shadow-md;
+  }
+}
